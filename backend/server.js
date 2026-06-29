@@ -154,12 +154,25 @@ app.use((err, req, res, next) => {
 });
 
 // ── Start server ────────────────────────────────────────────
-app.listen(PORT, '0.0.0.0', () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
-  console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
-  console.log(`📁 Uploads directory: ${uploadsDir}`);
-  console.log(`🔗 CORS origins: ${corsOrigins.join(', ')}`);
-});
+// app.listen(PORT, '0.0.0.0', () => {
+//   console.log(`🚀 Server running on http://localhost:${PORT}`);
+//   console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
+//   console.log(`📁 Uploads directory: ${uploadsDir}`);
+//   console.log(`🔗 CORS origins: ${corsOrigins.join(', ')}`);
+// });
+
+// ── Start server only for local development ─────────────────
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
+    console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
+    console.log(`📁 Uploads directory: ${uploadsDir}`);
+    console.log(`🔗 CORS origins: ${corsOrigins.join(', ')}`);
+  });
+}
+
+// Export app for Vercel
+module.exports = app;
 
 process.on('unhandledRejection', (err) => {
   console.error('Unhandled Rejection:', err);
