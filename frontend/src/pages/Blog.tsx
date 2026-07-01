@@ -47,6 +47,9 @@ export default function Blog() {
             <p className="text-white text-lg max-w-2xl mx-auto">
               In-depth articles, guides and analysis on climate, forecasting and weather science.
             </p>
+            <p className="text-lg leading-relaxed max-w-md mx-auto text-white">
+                Real-time temperature, forecasts, interactive graphs and global insights.
+              </p>  
           </div>
 
           {/* Featured blog */}
@@ -118,7 +121,7 @@ export default function Blog() {
               </div>
               <h2 className="text-2xl font-bold text-white mb-2">{selected.title}</h2>
               <p className="text-xs text-slate-500 mb-5 flex items-center gap-2">
-                <User size={12} /> {selected.author} · {selected.readTime} min read · {timeAgo(selected.createdAt)}
+                {/* <User size={12} /> {selected.author} · {selected.readTime} min read · {timeAgo(selected.createdAt)} */}
               </p>
               <p className="text-slate-300 leading-relaxed whitespace-pre-line">{selected.content}</p>
             </div>

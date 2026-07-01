@@ -75,7 +75,8 @@ body {
     radial-gradient(ellipse at 80% 80%, rgba(129, 140, 248, 0.10) 0%, transparent 50%),
     radial-gradient(ellipse at 50% 50%, rgba(52, 211, 153, 0.04) 0%, transparent 60%),
     linear-gradient(135deg, #020817 0%, #0a1628 40%, #061020 70%, #020817 100%); */
-    background: linear-gradient(180deg, #1E4FA0 0%, #3A7FD5 100%);
+    /* background: linear-gradient(180deg, #1E4FA0 0%, #3A7FD5 100%); */
+    background-color: #0D47A1;
   position: relative;
 }
 
@@ -219,7 +220,10 @@ body {
   box-shadow: 0 0 30px rgba(56, 189, 248, 0.4);
   transform: translateY(-2px);
 }
-
+.text {
+  /* font-size: 14px; */
+  margin-bottom: 10px;
+}
 /* ============================================================
    TYPOGRAPHY
    ============================================================ */
@@ -2103,6 +2107,9 @@ video {
 .topHeading {
   margin-top: 40px !important;
   color: #ffffff;
+}
+.topHeading2{
+  color: #1E88E5;
 }
 
 .recentSearch {

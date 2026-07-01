@@ -99,7 +99,7 @@ export default function WeatherCard({ data, onRefresh }: WeatherCardProps) {
         </div>
 
         {/* ── Main Temp + Icon ── */}
-        <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-8">
+        <div className="flex sm:flex-row items-center sm:items-start gap-6 mb-8">
           {/* Temperature */}
           <div>
             <div className="temp-display">{displayTemp(data.temperature)}</div>

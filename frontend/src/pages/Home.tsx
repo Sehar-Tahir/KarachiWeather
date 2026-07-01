@@ -209,14 +209,14 @@ export default function Home() {
           <div className="max-w-[680px] mx-auto">
             <div className="text-center mb-10">
               <h1 className="font-display text-5xl sm:text-6xl lg:text-6xl font-bold text-white mb-4 text-3d topHeading">
-                KarachiWeather
+                Karachi <span className="topHeading2">Weather</span>
               </h1>
               <div className="section-badge mx-auto mb-4">
                 🌍 Real-Time Weather Intelligence · Live Now
               </div>
-              <p className="text-lg leading-relaxed max-w-md mx-auto text-white">
+               {/* <p className="text-lg leading-relaxed max-w-md mx-auto text-white">
                 Real-time temperature, forecasts, interactive graphs and global insights.
-              </p>
+              </p>  */}
             </div>
 
             <SearchBar onSearch={loadWeather} isLoading={loading} />
@@ -224,6 +224,9 @@ export default function Home() {
               <RecentSearches onSelect={(city) => loadWeather(city, "city")} />
             </div>
           </div>
+          {/* <p className="text-lg leading-relaxed max-w-md mx-auto text-white text">
+                Real-time temperature, forecasts, interactive graphs and global insights.
+              </p> */}
 
           {error && (
             <div className="error-card max-w-2xl mx-auto mt-8 flex flex-col items-center gap-3 animate-scale-in">

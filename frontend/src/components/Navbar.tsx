@@ -77,12 +77,12 @@ export default function Navbar({ cityName = 'Karachi', onDropdownSelect }: Navba
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-2">
+          <div className=" font-display font-bold hidden md:flex items-center gap-2">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.label}
                 to={link.path}
-                className="px-6 py-2.5 text-sm font-medium text-white hover:text-slate-300 hover:bg-white/10 rounded-2xl transition-all"
+                className=" px-6 py-2.5 text-sm font-medium text-white hover:text-slate-300 hover:bg-white/10 rounded-2xl transition-all"
               >
                 {link.label}
               </Link>
